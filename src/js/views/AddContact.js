@@ -1,11 +1,11 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { useHistory, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { Context } from '../store/appContext';
 
 export const AddContact = () => {
     const { store, actions } = useContext(Context);
     const [contact, setContact] = useState({ full_name: '', email: '', agenda_slug: 'my_agenda', address: '', phone: '' });
-    const history = useHistory();
+    const navigate = useNavigate();
     const { id } = useParams();
 
     useEffect(() => {
@@ -25,9 +25,9 @@ export const AddContact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (id) {
-            actions.updateContact(contact, history);
+            actions.updateContact(contact, navigate);
         } else {
-            actions.addContact(contact, history);
+            actions.addContact(contact, navigate);
         }
     };
 

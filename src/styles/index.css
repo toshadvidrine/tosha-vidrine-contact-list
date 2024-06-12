@@ -1,3 +1,84 @@
-/* 
-    General Styles
-*/
+body {
+    background-color: #1a1a1a; /* Dark background */
+    color: #e0e0e0; /* Light text */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background: url('path/to/your/space-background.jpg') no-repeat center center fixed; */
+    background-size: cover;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff; /* White headings */
+}
+
+a {
+    color: #e0e0e0; /* Light text for links */
+    text-decoration: none;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent dark background */
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-list li {
+    background-color: #2a2a2a; /* Darker list items */
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-list li:hover {
+    background-color: #3a3a3a; /* Slightly lighter on hover */
+}
+
+button {
+    background-color: #444; /* Dark button */
+    color: #e0e0e0; /* Light text */
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #555; /* Slightly lighter on hover */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    border: 1px solid #444;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #888; /* Placeholder text color */
+}
